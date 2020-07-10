@@ -175,6 +175,7 @@ def user_stats(df):
         earliest_birth_year = df['Birth Year'].min()
         print("\nEarliest Year of Birth: ", earliest_birth_year)
         print()
+        
     except KeyError:
         print("\nEarliest Year of Birth: No data available for this month\n")
         
@@ -182,6 +183,7 @@ def user_stats(df):
         most_recent_birth_year = df['Birth Year'].max()
         print("\nMost Recent Year of Birth: ", most_recent_birth_year)
         print()
+
     except KeyError:
         print("\nMost Recent Year of Birth: No data available for this month\n")
         
@@ -196,6 +198,7 @@ def user_stats(df):
 
 
 def main():
+
     while True:
         city, period, month, day = get_filters()
         df = load_data(city, period, month, day)
@@ -207,6 +210,7 @@ def main():
         step=1
         start=0
         end=5
+
         while(step ==1):
             step=int(input('\nWould you like to view individual trip data? \nType 1 or 2 \n1:True\n2:False\n'))
             while((step != 1) and (step!=2)):
@@ -217,5 +221,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+
 if __name__ == "__main__":
 	main()
