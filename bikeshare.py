@@ -24,7 +24,7 @@ def get_filters():
         continue
       else:
         break
-        
+    # TO DO: Asks user to specify which period to filter by   
     while True:
       period = input("\nWould you like to filter the data by month, day, or not at all?\n").lower()
       if period not in ('month', 'day', 'not at all'):
